@@ -1,0 +1,57 @@
+<ion-view view-title="{{menuitem[0].name}}">
+<ion-nav-buttons side="right">
+    <button menu-toggle="right" class="button button-icon ion-bag" ng-click="cart()"><span style="    position: absolute;
+    right: 0;" ng-if="badge" class="badge badge-assertive">{{badge}}</span></button>
+  </ion-nav-buttons>
+  <ion-content>
+    <form name="menuitemform" novalidate>
+  <div class="bg" style="padding:0;">
+
+
+<div id="input-outer1" style="float:left;     margin: 2%;    width: 82%;">
+  <!--<input type="text" class="input1" id="tags" ng-keyup="complete()" style="float:left;width: 100%;" placeholder="Restaurants/Dishes/Cusines" />-->
+  <input type="text" class="input1" ng-model="searchText.textvalue" ng-change="changetext()" style="float:left;width: 100%;    margin: auto;" placeholder="Food" />
+    <i  id="search1" style="    font-size: 21px; color:#808082;    right: 18%;" class="icon ion-android-search"></i>
+    
+  
+</div>
+<div style="width:14%; float:right; background-color:#067ea0;    padding: 13px 0;">
+<!--<a ng-click="showPopup()" style="float:right; width:10%; margin:auto;  "><i  style="    font-size: 21px; color:#fff;" class="icon ion-android-restaurant"></i></a>-->
+<a style="float:right;    height: 33px;width:100%; margin:auto; text-align:center;color:#fff; "><i  style="    font-size: 21px; color:#fff; text-align:center;" class="icon ion-android-options"></i><br />Refine</a>
+</div>
+<div class="clear"></div>
+  </div>
+  <!--<div class="bg2">24 Results Found, Sort by best match</div>
+  <div class="list1 testing" ng-click="item({{menuitem.id}})"  ng-repeat="menuitem in menuitem[0].Menus | filter:searchText" style="    width: 98%;    margin: 1%;    background: #f3f3f3;">-->
+   
+  <div  ng-repeat="(key, value) in menuitem[0].Menus | filter:searchText.textvalue | groupBy: 'category_name'">
+  <div class="space"></div>
+  <div class="item item-divider" style="font-family: 'robotoregular';">{{key}}</div>
+  <div class="list1 testing item" ng-repeat="menuitem in value" style="    width: 98%;    margin: 1%;    background: #f3f3f3;">
+	<div class="list_left" ng-click="item({{menuitem.id}})" >
+		<img src="img/listitem.png" />
+		<!--<div class="discount_product">10% OFF</div>-->
+	</div>
+	<div class="list_right">
+		<p ng-click="item({{menuitem.id}})"  style="text-overflow:ellipsis;padding:5px 0;overflow: hidden;white-space: nowrap !important;font-family: 'robotoblack'; color:#000;">{{menuitem.name}}</p>
+		<!--<p style="text-overflow: ellipsis;font-size:0.9em;overflow: hidden;white-space: nowrap;">{{menuitem.category_name}}</p>-->
+		
+		
+		<p ng-click="item({{menuitem.id}})"  style="text-overflow:ellipsis;font-size:0.9em;padding-bottom:5px;overflow: hidden;white-space: nowrap !important;font-family:'BebasNeueRegular';">{{menuitem.short_description}}</p>
+		
+		<div style="clear:both;"></div>
+		<span ng-click="item({{menuitem.id}})"  style="padding:5px 0;float:left; color: #067ea0;    font-size: 19px;font-family: 'bebas_neuebold';">{{menuitem.Price}}</span>
+		<p style="float:right;">
+		<a class="button button-small button-calm" style="background-color:#067ea0;"  ng-click="addtocart({{menuitem.id}})" >Add&nbsp;to&nbsp;cart</a>
+    <div style="clear:both;"></div>
+		<!--<a class="button button-small button-calm" style=" background-color:#067ea0;height: 30px;"><img src="img/like.png" /></a>-->
+        <div style="float:right;    margin-top: 3px;">  <input ng-click="addtofav({{menuitem.id}},fav[menuitem.id])" ng-model="fav[menuitem.id]" type='checkbox' name='thing[$index]' value='valuable' id="{{key}}{{$index}}"/><label for="{{key}}{{$index}}"></label></div> </p>
+	</div>	
+	</div>
+  </div>
+<div class="space"></div>
+    </form>
+  </ion-content>
+</ion-view>
+
+

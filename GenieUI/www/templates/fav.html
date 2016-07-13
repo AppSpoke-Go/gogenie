@@ -1,0 +1,32 @@
+<ion-view view-title="Favourites">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+    <ion-content>   
+          <div ng-if="fav.length == ''">
+      <div class="list"><div class="item" style="text-align:center;">No item in the Favourites</div></div>
+    </div>
+  <div ng-if="fav.length != ''" class="list1 testing item" ng-repeat="fav in fav" style="    width: 98%;    margin: 1%;    background: #f3f3f3;">
+	<div class="list_left" ng-click="item({{fav.id}})" >
+		<img src="img/listitem.png" />
+	</div>
+	<div class="list_right">
+		<p ng-click="item({{fav.id}})"  style="text-overflow:ellipsis;padding:5px 0;overflow: hidden;white-space: nowrap !important;font-family: 'robotoblack';">{{fav.name}}</p>
+		
+		
+		<p ng-click="item({{fav.id}})"  style="text-overflow:ellipsis;font-size:0.9em;padding-bottom:5px;overflow: hidden;white-space: nowrap !important;">{{fav.short_description}}</p>
+		
+		<div style="clear:both;"></div>
+		<p ng-click="item({{fav.id}})"  style="color:#0a9dc7;padding:5px 0;float:left; font-family: 'bebas_neuebold';">{{fav.Price}}</p>
+		<p style="float:right;">
+		<button class="button button-stable" style="margin-top: 27px;">
+      <i class="icon ion-trash-b"></i>
+    </button> </p>
+	</div>	
+	</div>
+<div class="space"></div>
+    </ion-content>
+	<div class="bar bar-footer bar-calm">
+	  <div class="title" ng-click="removeall()">Clear All</div>
+	</div>
+</ion-view>

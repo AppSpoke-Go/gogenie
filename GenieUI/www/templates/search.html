@@ -1,0 +1,238 @@
+<ion-view view-title="Search">
+<ion-nav-buttons side="right">
+	<a menu-toggle="right" class="button button-icon ion-map" href="#/app/searchmap"></a>
+    <a menu-toggle="right" class="button button-icon ion-information-circled"></a> 
+  </ion-nav-buttons>
+  <ion-content>
+  <div class="bg" style="padding:0;">
+
+
+<div id="input-outer" style="float:left; margin: 10px 0;width: 80%;">
+  <input type="text" class="input1" id="tags" ng-keyup="complete()" style="float:left;width: 100%;" placeholder="Restaurants/Dishes" />
+  <a id="search1" href="#/app/search">
+    <i  style="    font-size: 21px; color:#808082;" class="icon ion-android-search"></i>
+    
+  </a>
+  
+</div>
+<div style="width:13%; float:right; background-color:#067ea0;    padding: 13px 0;">
+<!--<a ng-click="showPopup()" style="float:right; width:10%; margin:auto;  "><i  style="    font-size: 21px; color:#fff;" class="icon ion-android-restaurant"></i></a>-->
+<a style="float:right;    height: 33px;width:100%; margin:auto; text-align:center;color:#fff; "><i  style="    font-size: 21px; color:#fff; text-align:center;" class="icon ion-android-options"></i><br />Refine</a>
+</div>
+<div class="clear"></div>
+  </div>
+  <div class="bg2" style="background-color:#cacaca;">24 Results Found, Sort by best match</div>
+  <!--<div id="map" data-tap-disabled="true"></div>-->
+  <div class="list1" ng-click="items()">
+	<div class="list_left">
+		<img src="img/list.png" />
+		<div class="discount_product">10% OFF</div>
+	</div>
+	<div class="list_right">
+		<p><b>Restaurant Name</b></p>
+		<p>Cusine1, Cisine2...</p>
+		<p><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star-half"></i><i class="icon ion-ios-star-outline"></i>(123)</p>
+		<div style="width:33%; float:left;margin: auto;text-align: center;border-right: 1px solid #ccc;border-top: 1px solid #ccc;    height: 41px;">Min Order $10</div>
+		<div style="width:33%; float:left;margin: auto;text-align: center;border-right: 1px solid #ccc; border-top: 1px solid #ccc;   height: 41px;">Delivery Free</div>
+		<div style="width:33%; float:left;margin: auto;text-align: center;  height: 41px;border-top: 1px solid #ccc;">1.8m</div>
+	</div>
+	
+  </div><div style="border-left:1px solid #ccc;border-right:1px solid #ccc;border-bottom:1px solid #ccc; width:100%;width: 98%;padding: 1%;
+    margin: 1%;">Chicken Tikha, Ticken Lollipop....</div>
+	<div class="space"></div>
+	<div class="list1" ng-click="items()">
+	<div class="list_left">
+		<img src="img/list.png" />
+		<div class="discount_product">50% Off</div>
+	</div>
+	<div class="list_right">
+		<p><b>Restaurant Name</b></p>
+		<p>Cusine1, Cisine2...</p>
+		<p><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star-half"></i><i class="icon ion-ios-star-outline"></i>(123)</p>
+		<div style="width:33%; float:left;margin: auto;text-align: center;border-right: 1px solid #ccc;border-top: 1px solid #ccc;    height: 41px;">Min Order $10</div>
+		<div style="width:33%; float:left;margin: auto;text-align: center;border-right: 1px solid #ccc; border-top: 1px solid #ccc;   height: 41px;">Delivery Free</div>
+		<div style="width:33%; float:left;margin: auto;text-align: center;  height: 41px;border-top: 1px solid #ccc;">1.8m</div>
+	</div>
+	
+  </div><div style="border-left:1px solid #ccc;border-right:1px solid #ccc;border-bottom:1px solid #ccc; width:100%;width: 98%;padding: 1%;
+    margin: 1%;">Chicken Tikha, Ticken Lollipop....</div>
+	<div class="space"></div>
+	<div class="list1" ng-click="items()">
+	<div class="list_left">
+		<img src="img/list.png" />
+	</div>
+	<div class="list_right">
+		<p><b>Restaurant Name</b></p>
+		<p>Cusine1, Cisine2...</p>
+		<p><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star-half"></i><i class="icon ion-ios-star-outline"></i>(123)</p>
+		<div style="width:33%; float:left;margin: auto;text-align: center;border-right: 1px solid #ccc;border-top: 1px solid #ccc;    height: 41px;">Min Order $10</div>
+		<div style="width:33%; float:left;margin: auto;text-align: center;border-right: 1px solid #ccc; border-top: 1px solid #ccc;   height: 41px;">Delivery Free</div>
+		<div style="width:33%; float:left;margin: auto;text-align: center;  height: 41px;border-top: 1px solid #ccc;">1.8m</div>
+	</div>
+	
+  </div><div style="border-left:1px solid #ccc;border-right:1px solid #ccc;border-bottom:1px solid #ccc; width:100%;width: 98%;padding: 1%;
+    margin: 1%;">Chicken Tikha, Ticken Lollipop....</div>
+	<div class="space"></div>
+	<div class="list1" ng-click="items()">
+	<div class="list_left">
+		<img src="img/list.png" />
+		<div class="discount_product">10% OFF</div>
+	</div>
+	<div class="list_right">
+		<p><b>Restaurant Name</b></p>
+		<p>Cusine1, Cisine2...</p>
+		<p><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star-half"></i><i class="icon ion-ios-star-outline"></i>(123)</p>
+		<div style="width:33%; float:left;margin: auto;text-align: center;border-right: 1px solid #ccc;border-top: 1px solid #ccc;    height: 41px;">Min Order $10</div>
+		<div style="width:33%; float:left;margin: auto;text-align: center;border-right: 1px solid #ccc; border-top: 1px solid #ccc;   height: 41px;">Delivery Free</div>
+		<div style="width:33%; float:left;margin: auto;text-align: center;  height: 41px;border-top: 1px solid #ccc;">1.8m</div>
+	</div>
+  </div><div style="border-left:1px solid #ccc;border-right:1px solid #ccc;border-bottom:1px solid #ccc; width:100%;width: 98%;padding: 1%;
+    margin: 1%;">Chicken Tikha, Ticken Lollipop....</div>
+	<div class="space"></div>
+	<div class="list1" ng-click="items()">
+	<div class="list_left">
+		<img src="img/list.png" />
+	</div>
+	<div class="list_right">
+		<p><b>Restaurant Name</b></p>
+		<p>Cusine1, Cisine2...</p>
+		<p><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star-half"></i><i class="icon ion-ios-star-outline"></i>(123)</p>
+		<div style="width:33%; float:left;margin: auto;text-align: center;border-right: 1px solid #ccc;border-top: 1px solid #ccc;    height: 41px;">Min Order $10</div>
+		<div style="width:33%; float:left;margin: auto;text-align: center;border-right: 1px solid #ccc; border-top: 1px solid #ccc;   height: 41px;">Delivery Free</div>
+		<div style="width:33%; float:left;margin: auto;text-align: center;  height: 41px;border-top: 1px solid #ccc;">1.8m</div>
+	</div>
+	
+  </div><div style="border-left:1px solid #ccc;border-right:1px solid #ccc;border-bottom:1px solid #ccc; width:100%;width: 98%;padding: 1%;
+    margin: 1%;">Chicken Tikha, Ticken Lollipop....</div>
+	<div class="space"></div>
+	<div class="list1" ng-click="items()">
+	<div class="list_left">
+		<img src="img/list.png" />
+	</div>
+	<div class="list_right">
+		<p><b>Restaurant Name</b></p>
+		<p>Cusine1, Cisine2...</p>
+		<p><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star-half"></i><i class="icon ion-ios-star-outline"></i>(123)</p>
+		<div style="width:33%; float:left;margin: auto;text-align: center;border-right: 1px solid #ccc;border-top: 1px solid #ccc;    height: 41px;">Min Order $10</div>
+		<div style="width:33%; float:left;margin: auto;text-align: center;border-right: 1px solid #ccc; border-top: 1px solid #ccc;   height: 41px;">Delivery Free</div>
+		<div style="width:33%; float:left;margin: auto;text-align: center;  height: 41px;border-top: 1px solid #ccc;">1.8m</div>
+	</div>
+	
+  </div><div style="border-left:1px solid #ccc;border-right:1px solid #ccc;border-bottom:1px solid #ccc; width:100%;width: 98%;padding: 1%;
+    margin: 1%;">Chicken Tikha, Ticken Lollipop....</div>
+	<div class="space"></div>
+	<div class="list1" ng-click="items()">
+	<div class="list_left">
+		<img src="img/list.png" />
+	</div>
+	<div class="list_right">
+		<p><b>Restaurant Name</b></p>
+		<p>Cusine1, Cisine2...</p>
+		<p><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star-half"></i><i class="icon ion-ios-star-outline"></i>(123)</p>
+		<div style="width:33%; float:left;margin: auto;text-align: center;border-right: 1px solid #ccc;border-top: 1px solid #ccc;    height: 41px;">Min Order $10</div>
+		<div style="width:33%; float:left;margin: auto;text-align: center;border-right: 1px solid #ccc; border-top: 1px solid #ccc;   height: 41px;">Delivery Free</div>
+		<div style="width:33%; float:left;margin: auto;text-align: center;  height: 41px;border-top: 1px solid #ccc;">1.8m</div>
+	</div>
+	
+  </div><div style="border-left:1px solid #ccc;border-right:1px solid #ccc;border-bottom:1px solid #ccc; width:100%;width: 98%;padding: 1%;
+    margin: 1%;">Chicken Tikha, Ticken Lollipop....</div>
+	<div class="space"></div>
+	<div class="list1" ng-click="items()">
+	<div class="list_left">
+		<img src="img/list.png" />
+	</div>
+	<div class="list_right">
+		<p><b>Restaurant Name</b></p>
+		<p>Cusine1, Cisine2...</p>
+		<p><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star-half"></i><i class="icon ion-ios-star-outline"></i>(123)</p>
+		<div style="width:33%; float:left;margin: auto;text-align: center;border-right: 1px solid #ccc;border-top: 1px solid #ccc;    height: 41px;">Min Order $10</div>
+		<div style="width:33%; float:left;margin: auto;text-align: center;border-right: 1px solid #ccc; border-top: 1px solid #ccc;   height: 41px;">Delivery Free</div>
+		<div style="width:33%; float:left;margin: auto;text-align: center;  height: 41px;border-top: 1px solid #ccc;">1.8m</div>
+	</div>
+  </div><div style="border-left:1px solid #ccc;border-right:1px solid #ccc;border-bottom:1px solid #ccc; width:100%;width: 98%;padding: 1%;
+    margin: 1%;">Chicken Tikha, Ticken Lollipop....</div>
+	<div class="space"></div>
+	<div class="list1" ng-click="items()">
+	<div class="list_left">
+		<img src="img/list.png" />
+	</div>
+	<div class="list_right">
+		<p><b>Restaurant Name</b></p>
+		<p>Cusine1, Cisine2...</p>
+		<p><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star-half"></i><i class="icon ion-ios-star-outline"></i>(123)</p>
+		<div style="width:33%; float:left;margin: auto;text-align: center;border-right: 1px solid #ccc;border-top: 1px solid #ccc;    height: 41px;">Min Order $10</div>
+		<div style="width:33%; float:left;margin: auto;text-align: center;border-right: 1px solid #ccc; border-top: 1px solid #ccc;   height: 41px;">Delivery Free</div>
+		<div style="width:33%; float:left;margin: auto;text-align: center;  height: 41px;border-top: 1px solid #ccc;">1.8m</div>
+	</div>
+	
+  </div><div style="border-left:1px solid #ccc;border-right:1px solid #ccc;border-bottom:1px solid #ccc; width:100%;width: 98%;padding: 1%;
+    margin: 1%;">Chicken Tikha, Ticken Lollipop....</div>
+	<div class="space"></div>
+	<div class="list1" ng-click="items()">
+	<div class="list_left">
+		<img src="img/list.png" />
+		<div class="discount_product">10% OFF</div>
+	</div>
+	<div class="list_right">
+		<p><b>Restaurant Name</b></p>
+		<p>Cusine1, Cisine2...</p>
+		<p><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star-half"></i><i class="icon ion-ios-star-outline"></i>(123)</p>
+		<div style="width:33%; float:left;margin: auto;text-align: center;border-right: 1px solid #ccc;border-top: 1px solid #ccc;    height: 41px;">Min Order $10</div>
+		<div style="width:33%; float:left;margin: auto;text-align: center;border-right: 1px solid #ccc; border-top: 1px solid #ccc;   height: 41px;">Delivery Free</div>
+		<div style="width:33%; float:left;margin: auto;text-align: center;  height: 41px;border-top: 1px solid #ccc;">1.8m</div>
+	</div>
+	
+  </div><div style="border-left:1px solid #ccc;border-right:1px solid #ccc;border-bottom:1px solid #ccc; width:100%;width: 98%;padding: 1%;
+    margin: 1%;">Chicken Tikha, Ticken Lollipop....</div>
+	<div class="space"></div>
+	<div class="list1" ng-click="items()">
+	<div class="list_left">
+		<img src="img/list.png" />
+	</div>
+	<div class="list_right">
+		<p><b>Restaurant Name</b></p>
+		<p>Cusine1, Cisine2...</p>
+		<p><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star-half"></i><i class="icon ion-ios-star-outline"></i>(123)</p>
+		<div style="width:33%; float:left;margin: auto;text-align: center;border-right: 1px solid #ccc;border-top: 1px solid #ccc;    height: 41px;">Min Order $10</div>
+		<div style="width:33%; float:left;margin: auto;text-align: center;border-right: 1px solid #ccc; border-top: 1px solid #ccc;   height: 41px;">Delivery Free</div>
+		<div style="width:33%; float:left;margin: auto;text-align: center;  height: 41px;border-top: 1px solid #ccc;">1.8m</div>
+	</div>
+	
+  </div><div style="border-left:1px solid #ccc;border-right:1px solid #ccc;border-bottom:1px solid #ccc; width:100%;width: 98%;padding: 1%;
+    margin: 1%;">Chicken Tikha, Ticken Lollipop....</div>
+	<div class="space"></div>
+	<div class="list1" ng-click="items()">
+	<div class="list_left">
+		<img src="img/list.png" />
+	</div>
+	<div class="list_right">
+		<p><b>Restaurant Name</b></p>
+		<p>Cusine1, Cisine2...</p>
+		<p><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star-half"></i><i class="icon ion-ios-star-outline"></i>(123)</p>
+		<div style="width:33%; float:left;margin: auto;text-align: center;border-right: 1px solid #ccc;border-top: 1px solid #ccc;    height: 41px;">Min Order $10</div>
+		<div style="width:33%; float:left;margin: auto;text-align: center;border-right: 1px solid #ccc; border-top: 1px solid #ccc;   height: 41px;">Delivery Free</div>
+		<div style="width:33%; float:left;margin: auto;text-align: center;  height: 41px;border-top: 1px solid #ccc;">1.8m</div>
+	</div>
+	
+  </div><div style="border-left:1px solid #ccc;border-right:1px solid #ccc;border-bottom:1px solid #ccc; width:100%;width: 98%;padding: 1%;
+    margin: 1%;">Chicken Tikha, Ticken Lollipop....</div>
+	<div class="space"></div>
+	<div class="list1" ng-click="items()">
+	<div class="list_left">
+		<img src="img/list.png" />
+	</div>
+	<div class="list_right">
+		<p><b>Restaurant Name</b></p>
+		<p>Cusine1, Cisine2...</p>
+		<p><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star-half"></i><i class="icon ion-ios-star-outline"></i>(123)</p>
+		<div style="width:33%; float:left;margin: auto;text-align: center;border-right: 1px solid #ccc;border-top: 1px solid #ccc;    height: 41px;">Min Order $10</div>
+		<div style="width:33%; float:left;margin: auto;text-align: center;border-right: 1px solid #ccc; border-top: 1px solid #ccc;   height: 41px;">Delivery Free</div>
+		<div style="width:33%; float:left;margin: auto;text-align: center;  height: 41px;border-top: 1px solid #ccc;">1.8m</div>
+	</div>
+	
+  </div><div style="border-left:1px solid #ccc;border-right:1px solid #ccc;border-bottom:1px solid #ccc; width:100%;width: 98%;padding: 1%;
+    margin: 1%;">Chicken Tikha, Ticken Lollipop....</div>
+	<div class="space"></div>
+	
+  </ion-content>
+</ion-view>

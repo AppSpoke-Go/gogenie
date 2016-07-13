@@ -1,0 +1,67 @@
+<ion-view view-title="Address Details">
+    <ion-content>
+  <!--
+  .row{
+	text-align: center;
+color: rgb(255, 255, 255);
+display: -moz-deck;
+padding: 17px;
+  }
+ .card, .list-inset {
+ margin-left: 35px;
+margin-right: 35px;
+ } 
+  .item-heigth{height: 28px;}
+-->
+<form ng-submit="shipping();">
+<div class="list list-inset">
+  <label class="item item-heigth item-input">
+    <i class="icon ion-person placeholder-icon"></i>
+    <input type="text" placeholder="First Name" ng-model="shipping.sfname"required>
+  </label>
+</div>
+<div class="list list-inset">
+  <label class="item item-heigth item-input">
+    <i class="icon ion-person placeholder-icon"></i>
+    <input type="text" placeholder="Last Name" ng-model="shipping.slname"required>
+  </label>
+</div>
+<div class="list list-inset">
+  <label class="item item-heigth item-input">
+    <i class="icon ion-android-phone-portrait placeholder-icon"></i>
+    <input type="text" placeholder="Phone Number" ng-model="shipping.sphone"required>
+  </label>
+</div>
+<div class="list list-inset">
+  <label class="item item-heigth item-input">
+    <i class="icon ion-location placeholder-icon"></i>
+    <input type="text" placeholder="Address" ng-model="shipping.saddress"required>
+  </label>
+</div>
+<div class="list  list-inset">
+  <label class="item item-heigth item-input">
+    <i class="icon ion-location placeholder-icon"></i>
+    <input type="text" placeholder="city" ng-model="shipping.scity"required>
+  </label>
+</div>
+<div class="list list-inset">
+  <label class="item item-heigth item-input">
+    <i class="icon ion-location placeholder-icon"></i>
+    <input type="text" placeholder="State" ng-model="shipping.sstate"required>
+  </label>
+</div>
+<div class="list list-inset">
+  <label class="item item-heigth item-input">
+    <i class="icon ion-location placeholder-icon"></i>
+    <input type="number" placeholder="Zip code" ng-model="shipping.szip"required>
+  </label>
+</div>
+<div class="row">
+	<button type="submit" class="button button-block button-calm" ng-click="save()">
+  Save
+</button>
+	</div>
+	
+</form>
+  </ion-content>
+</ion-view>

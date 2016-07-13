@@ -1,0 +1,25 @@
+<ion-view view-title="Search">
+<ion-nav-buttons side="right">
+	<a menu-toggle="right" class="button button-icon ion-ios-list" href="#/app/search"></a>
+    <a menu-toggle="right" class="button button-icon ion-information-circled"></a> 
+  </ion-nav-buttons>
+  <ion-content ng-controller="MapController" ng-init="initialize()">
+      <div class="bg1">
+<div class="clear"></div>
+<div id="input-outer">
+  <input type="text" class="input1" style="background:none; border-left:1px solid #fff; border-right:1px solid #fff; border-bottom:1px solid #fff; border-top:none; border-radius:0;"  id="tags" ng-keyup="complete()"/>
+  <a id="search1" href="#/app/search">
+    <i  style="    font-size: 21px; color:#fff;" class="icon ion-android-search"></i>
+    
+  </a>
+  <a id="set" ng-click="showPopup()">
+    <i  style="    font-size: 21px; color:#fff;" class="icon ion-android-options"></i>
+    
+  </a>
+  
+</div>
+  </div>
+  <div class="bg2">24 Results Found, Sort by best match</div>
+  <div id="map" data-tap-disabled="true"></div>	
+  </ion-content>
+</ion-view>

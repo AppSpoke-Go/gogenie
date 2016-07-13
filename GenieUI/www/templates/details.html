@@ -1,0 +1,45 @@
+<ion-view view-title="Product Description" ng-show="shouldShow">
+<ion-nav-buttons side="right">
+	<!--<a menu-toggle="right" class="button button-icon ion-heart" href="#/app/fav"></a>-->
+    <button menu-toggle="right" class="button button-icon ion-bag" ng-click="cart()"><span style="    position: absolute;
+    right: 0;" ng-if="badge" class="badge badge-assertive">{{badge}}</span></button>
+  </ion-nav-buttons>
+  <ion-content>
+	  <form name="detail" novalidate>
+<div class="container" style="text-align:center;">
+		<img src="img/Pizza.jpg" class="img" style="padding:0; width:100%">
+	</div>
+	<div class="row" style="padding-bottom: 0px;">
+		
+	<div class="list card" style="width:100%;background: none;margin: 0px; box-shadow:none;">
+		<div class="item" style="background: none;border: none;    margin-bottom: 0px;">
+            <h2 style="font-family: 'robotoblack';">{{menuitemdet[0].name}}</h2>
+             <!--<div>
+                <span class="badge badge-assertive">5%off</span>
+            </div>	-->
+            <p style="font-family:'BebasNeueRegular';">{{menuitemdet[0].category_name}}</p>
+			<p>{{menuitemdet[0].short_description}}	</p>
+                
+		</div>
+		
+	</div>
+	</div>
+	
+	<div style="position: relative;padding: 0px 19px;color: #000; font-size: 15px;  "><span style="float:left; margin-top:7px; vertical-align:"><i class="icon" style="color: #11C1F3;font-size: 18px;vertical-align: -moz-middle-with-baseline; font-family: 'bebas_neuebold';">{{menuitemdet[0].Price}}</i></span><span style=" float:right; margin-right:10px;margin-top: 7px; vertical-align: middle;  width: auto;"><span style=" padding-top: 5px; vertical-align: -moz-middle-with-baseline;width: auto;
+    margin-right: 5px;    float: left;">Quantity</span> <input type='button' value='+' class='qtyplus' field='quantity'  style="float:right;background-color:#067ea0; color:#fff;; border:0;height: 34px;"/>
+    <input type='text' ng-model="quantity" name='quantity' value='1' class='qty'  style="float:right;    border: 1px solid #067ea0;"/>
+    <input type='button' value='-' class='qtyminus' field='quantity' style="float:right;background-color:#067ea0; color:#fff; border:0;height: 34px;"/></span><!--<input type="number" style="width:30px; border:1px solid #ccc;"/>-->
+
+	</div>
+	<div style="clear:both;"></div>
+	<div style="clear:both;"></div>
+	<div  style="position: relative;padding: 0px 19px;color: #000; font-size: 13px;  ">
+		Notes:
+		<textarea style="width:100%; border: 1px solid #067ea0; height: 70px;" ng-model="notes"></textarea>
+	</div>
+	<div style="clear:both;"></div>
+		<div class="padding">
+		<a class="button button-calm button-block" ng-click="addtocart(notes)">Add to Cart</a></div>
+	  </form>
+  </ion-content>
+</ion-view>

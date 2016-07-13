@@ -1,0 +1,87 @@
+<ion-view title="Restaurants" ng-show="shouldShow">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+	<button menu-toggle="right" class="button button-icon ion-bag" ng-click="cart()"><span style="    position: absolute;
+    right: 0;" ng-if="badge" class="badge badge-assertive">{{badge}}</span></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">  
+  <div class="search-wrapper">
+	<form  ng-if="!near">
+	<input type="text" name="focus" required class="search-box" style="padding: 10px;" placeholder="Pincode/City/Address" ng-model="useraddress" googleplace="" autocomplete="off"/>
+		<button class="close-icon" type="reset" style="    float: left;    position: relative;    margin-left: -39px;    margin-top: 5px;"></button>
+		<a class="button button-stable button-small" ng-click="nearme()" id="search" style="
+    height: 33px;
+    background-color:#067ea0;
+    color:#fff;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;width: 12%;
+    /* width: 20%; */
+    "><i style="font-size: 21px; color:#fff;" class="icon ion-navigate"></i></a>
+		<a class="button button-stable button-small" ng-click="setmyloc(useraddress)" style="float:right;height: 33px;white-space: nowrap;    overflow:hidden;background-color:#067ea0;color:#fff;width: 20%;">Delivery</a>
+		<div style="clear:both"></div>
+	</form>
+	<a ng-if="near" ng-click="clearmyloc()" class="button button-stable button-small" style="height: 33px;white-space: nowrap;    overflow:hidden;background-color:#067ea0;color:#fff;width: 100%; margin:auto;">Delivery - {{nearlocation}}</a>
+</div>
+
+  <div class="bg" style="padding:0;">
+
+
+<div id="input-outer1" style="float:left;     margin: 2%;    width: 82%;">
+  <!--<input type="text" class="input1" id="tags" ng-keyup="complete()" style="float:left;width: 100%;" placeholder="Restaurants/Dishes/Cusines" />-->
+  <input type="text" class="input1" ng-model="searchText.textvalue" ng-change="changetext()" style="float:left;width: 100%;    margin: auto;" placeholder="Restaurants/Cusines/Food" />
+    <i  id="search1" style="    font-size: 21px; color:#808082;    right: 18%;" class="icon ion-android-search"></i>
+    
+  
+</div>
+<div style="width:14%; float:right; background-color:#067ea0;    padding: 13px 0;">
+<!--<a ng-click="showPopup()" style="float:right; width:10%; margin:auto;  "><i  style="    font-size: 21px; color:#fff;" class="icon ion-android-restaurant"></i></a>-->
+<a style="float:right;    height: 33px;width:100%; margin:auto; text-align:center;color:#fff; "><i  style="    font-size: 21px; color:#fff; text-align:center;" class="icon ion-android-options"></i><br />Refine</a>
+</div>
+<div class="clear"></div>
+  </div>
+  <div class="space"></div>
+  <center>
+  <a class="button button-calm button-small" style="background-color:#067ea0; color:#fff;" ng-click="searchchange()"  ng-if="showbut">Search&nbsp;All</a>
+  </center>
+<span ng-if="showlist">
+<div class="clear"></div>
+<div class="testing" ng-repeat="menu in menus | filter : searchfil" style="margin: 1% 1% 2% 1%;">
+<!--<div class="testing" ng-repeat="menu in menus | filter: {Menus: {name: searchText.textvalue}} || {cuisine: {type:  searchText.textvalue}}" style="margin: 1% 1% 2% 1%;">-->
+
+<div class="list1" ng-click="items({{menu.id}})" style="background:#f3f3f3;    margin-top: 0;">
+	<div class="list_left">
+		<img src="img/list.png" />
+		<!--<div class="discount_product">10% OFF</div>-->
+	</div>
+	<div class="list_right">
+		<p style="font-family: 'robotoblack';">{{menu.name}}</p>
+		<p style="font-family:'BebasNeueRegular';">{{menu.cuisine.type}}</p>
+		<p ng-if="menu.rating == '5'"><i class="icon ion-ios-star starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star  starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star starfontsize" style="color:#eccd00;"></i>({{menu.restaurant_reviews}})</p>
+		<p ng-if="menu.rating == '4.5'"><i class="icon ion-ios-star starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star-half starfontsize" style="color:#eccd00;"></i>({{menu.restaurant_reviews}})</p>
+		<p ng-if="menu.rating == '4'"><i class="icon ion-ios-star starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star-outline starfontsize" style="color:#eccd00;"></i>({{menu.restaurant_reviews}})</p>
+		<p ng-if="menu.rating == '3.5'"><i class="icon ion-ios-star starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star-half starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star-outline starfontsize" style="color:#eccd00;"></i>({{menu.restaurant_reviews}})</p>
+		<p ng-if="menu.rating == '3'"><i class="icon ion-ios-star starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star-outline starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star-outline starfontsize" style="color:#eccd00;"></i>({{menu.restaurant_reviews}})</p>
+		<p ng-if="menu.rating == '2.5'"><i class="icon ion-ios-star starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star-half starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star-outline starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star-outline starfontsize" style="color:#eccd00;"></i>({{menu.restaurant_reviews}})</p>
+		<p ng-if="menu.rating == '2'"><i class="icon ion-ios-star starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star-outline starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star-outline starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star-outline starfontsize" style="color:#eccd00;"></i>({{menu.restaurant_reviews}})</p>
+		<p ng-if="menu.rating == '1.5'"><i class="icon ion-ios-star starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star-outline starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star-outline starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star-outline starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star-outline starfontsize" style="color:#eccd00;"></i>({{menu.restaurant_reviews}})</p>
+		<p ng-if="menu.rating == '1'"><i class="icon ion-ios-star starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star-half starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star-outline" style="color:#eccd00;font-size:21px;"></i><i class="icon ion-ios-star-outline" style="color:#eccd00;"></i><i class="icon ion-ios-star-outline starfontsize" style="color:#eccd00;"></i>({{menu.restaurant_reviews}})</p>
+		<p ng-if="menu.rating == '0.5'"><i class="icon ion-ios-star-half starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star-outline starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star-outline starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star-outline starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star-outline starfontsize" style="color:#eccd00;"></i>({{menu.restaurant_reviews}})</p>
+		<p ng-if="menu.rating == '0'"><i class="icon ion-ios-star-outline starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star-outline starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star-outline starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star-outline starfontsize" style="color:#eccd00;"></i><i class="icon ion-ios-star-outline starfontsize" style="color:#eccd00;"></i>({{menu.restaurant_reviews}})</p>
+		<a  style="     position: absolute;margin-top: -20px;    right: 10px; color:#000;" ><img src="img/food.png"/><img src="img/clock.png"/><span style="font-size:12px;font-family: 'robotoregular';">{{menu.delivery_time}}</span> mins</a><div style="clear:both;"></div>
+		<div style="width:33%; float:left;margin: auto;text-align: center;border-right: 1px solid #ccc;border-top: 1px solid #ccc;    height: 41px;font-family: 'robotoregular';">Min Order<br /><span style="    padding: 3px;    color: #067ea0;    font-size: 19px;font-family: 'bebas_neuebold';">{{menu.minimum_order}}</span></div>
+		<div style="width:33%; float:left;margin: auto;text-align: center;border-right: 1px solid #ccc; border-top: 1px solid #ccc;   height: 41px;font-family: 'robotoregular';">Delivery<br /><span style="     padding: 3px;    color: #067ea0;    font-size: 19px;font-family: 'bebas_neuebold';">{{menu.delivery_fee}}</span></div>
+		<div style="width:33%; float:left;margin: auto;text-align: center;  height: 41px;border-top: 1px solid #ccc;font-family: 'robotoregular';">Distance <br /><span style="      padding: 3px;    color: #067ea0;    font-size: 19px;font-family: 'bebas_neuebold';">{{menu.distance}}</span></div>
+	</div>	
+  </div>
+  <div style="border-left:1px solid #ccc;border-right:1px solid #ccc;border-bottom:1px solid #ccc; width:100%;padding: 1%;background:#f3f3f3;font-family:'BebasNeueRegular';
+   "><span style="font-family:robotoregular; font-size:0.95em;" ng-repeat="menus in menu.Menus | limitTo:quantity">{{menus.name}},</span>....</div>
+	
+	</div>
+	<div class="space"></div>
+	</span>
+  </ion-content>
+</ion-view>

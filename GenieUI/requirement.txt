@@ -1,0 +1,72 @@
+Registration(GooGle, FB, new GoGenie acc)
+Autologin 
+Identify existing user while reinstall
+
+Location - GPS
+Search - List view & Map view
+Filter
+Sort
+
+restaurant (Business)
+
+Menu with price
+Item description
+View basket summary
+
+Add to cart(edit quantity or remove item)
+
+One click checkout(Registered Customers) - can edit the details
+Register before placing order
+Capture/select address(max-5 address)
+Delivery time calculator
+payment method
+submit order
+
+Submitted message - Awaiting order to be accepted
+Order accepted
+Preparing order
+Delivered & Payment received
+Out for delivery
+Order fullfilled
+Order in issue
+
+view/modify Favourite restaurants
+My Orders
+Add order to Favourite
+Create Favourite Orders
+Favourite Orders
+Reorder from favourites
+
+Review
+View reviews for restaurants
+Notification to write review for the last order (after 1 hour of food delivery)
+Write reviews for restaurants
+Like button for menu item
+
+Contact Us	
+Report an issue
+Suggest a resturant
+Suggest an idea
+
+Field agent-(visit closing loop)
+
+Restaurant
+Create Account
+Upload data
+discounts
+Opening time
+Item not available
+Receive order
+time to prepare food
+Accept order
+Propose new time
+Decline order
+Out for delivery
+Order delivered
+Order delivered & Payment received
+Reviews
+Reply to reviews
+Issues with an order
+Loyalty 
+promotions -Lucky draw
+

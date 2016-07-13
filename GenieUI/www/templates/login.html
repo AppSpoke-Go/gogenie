@@ -1,0 +1,37 @@
+<ion-view view-title="Login" align-title="left">
+    <ion-content style="background: url(img/hotel.jpg) center; background-size: cover;">	
+	
+	<div class="parent">
+	<div class=" padding"
+	<center><h1 style="color:#fff;text-align: center;">GO GENIE</h1></center>
+	<div class="space"></div>
+	<div class="space"></div>
+	<div class="space"></div>
+	<div class="space"></div>
+	<div class="space"></div>
+	<div class="space"></div>
+	<div class="space"></div>
+		<div class="list">
+            <label class="item item-input">
+              <span class="input-label">Username</span>
+              <input type="text" ng-model="user.username">
+            </label>
+			<div class="space"></div>
+            <label class="item item-input">
+              <span class="input-label">Password</span>
+              <input type="password" ng-model="user.password">
+            </label>
+        </div>	</div>
+		<div class="row"> 
+			<div class="col"><button class="button button-full button-calm" ng-click="LogIn(user)">Login</button></div>
+			<div class="col"><button class="button button-full button-balanced" ng-click="register(user)">Sign Up</button></div>     
+		</div>
+		<div class=" padding" style="padding-top:0;">
+          <div style="text-align:center; color:#fff;"><a href="#/forget" style="color:#fff; text-decoration:none;">Forget Password?</a></div>  	
+<div class="space"></div>		  
+          <div style="text-align:center; color:#fff;"><a style="color:#11c1f3;    font-size: 22px;	font-weight:bold;" ng-click="LogIn(user)">Skip >></a></div>  	</div>	</div>			
+    </ion-content>
+		<!--<div class="bar bar-footer bar-dark" style="background-color:#000;">
+		  <div class="title">Skip >></div>
+		</div>	-->
+</ion-view>

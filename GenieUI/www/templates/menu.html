@@ -1,0 +1,34 @@
+<ion-side-menus>
+
+   <ion-side-menu-content>
+    <ion-nav-bar class="bar-calm nav-title-slide-ios7" style="border:0;">
+      <ion-nav-back-button class="button-clear"><i class="icon ion-chevron-left"></i></ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+   </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <header class="bar bar-header bar-calm">
+      <h1 class="title"><a href="#/app/home" menu-close style="text-decoration:none; text-align:left;">Home</a></h1>
+    </header>
+    <ion-content class="has-header">
+     <ion-list>
+		<ion-item nav-clear menu-close  class="item-icon-left" href="#/app/login">
+          <i class="icon ion-log-in"></i>Login
+        </ion-item>
+		<ion-item nav-clear menu-close  class="item-icon-left" href="#/app/fav">
+          <i class="icon ion-heart"></i>Favourites
+        </ion-item>
+		<ion-item nav-clear menu-close  class="item-icon-left" href="#/app/myorders">
+          <i class="icon ion-ios-cart-outline"></i>My Orders
+        </ion-item>
+		<ion-item nav-clear menu-close  class="item-icon-left" href="#/app/favorder">
+          <i class="icon ion-ios-cart"></i>Favourite Orders
+        </ion-item>
+		<ion-item nav-clear menu-close href="#/app/contact"  class="item-icon-left">
+          <i class="icon ion-person"></i>Contact Us
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
